@@ -1,19 +1,80 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="42.513809">
-<testsuite name="TC_Login.spec.js" timestamp="2026-05-08T05:33:02.612Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="31.544" errors="0">
-<testcase name="Login to Salesforce › Step 1 - login" classname="TC_Login.spec.js" time="31.544">
+<testsuites id="" name="" tests="6" failures="1" skipped="4" errors="0" time="24.456455000000002">
+<testsuite name="TC_PersonalDetails.spec.js" timestamp="2026-05-08T06:16:44.165Z" hostname="Chrome" tests="6" failures="1" skipped="4" time="10.631" errors="0">
+<testcase name="Personal Details Page Tests › Step 1 - Fill all Personal Details" classname="TC_PersonalDetails.spec.js" time="5.286">
 <system-out>
-<![CDATA[ Starting Salesforce Login (Hybrid Mode)...
- Waiting for Authenticator approval OR OTP screen...
- OTP screen detected directly
- Starting OTP Flow...
- OTP Attempt #1
- OTP Entered: 471707
- Login successful: https://resourceful-impala-ehughf-dev-ed.trailblaze.my.salesforce-setup.com/lightning/setup/SetupOneHome/home?SetupDomainReload=1&SetupDomainProbePassed=true
- Login successfully.
+<![CDATA[✅ Selected "$500" by value
+✅ Selected "Living Expenses" by value
+ Personal Details form filled successfully.
 
-[[ATTACHMENT|test-results\TC_Login-Login-to-Salesforce-Step-1---login-Chrome\test-finished-1.png]]
+[[ATTACHMENT|test-results\TC_PersonalDetails-Persona-eb414---Fill-all-Personal-Details-Chrome\test-finished-1.png]]
 ]]>
 </system-out>
+</testcase>
+<testcase name="Personal Details Page Tests › Step 2 - Verify Email and Fill Contact Details" classname="TC_PersonalDetails.spec.js" time="5.345">
+<failure message="TC_PersonalDetails.spec.js:46:7 Step 2 - Verify Email and Fill Contact Details" type="FAILURE">
+<![CDATA[  [Chrome] › TC_PersonalDetails.spec.js:46:7 › Personal Details Page Tests › Step 2 - Verify Email and Fill Contact Details 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=verification code has been sent to your email address')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=verification code has been sent to your email address')
+
+
+      45 |   //  Step 2 - Verify Email and Fill Contact Details (continues from previous state)
+      46 |   test('Step 2 - Verify Email and Fill Contact Details', async () => {
+    > 47 |     await expect(contactVerification.getEmailVerificationMessageLocator()).toBeVisible();
+         |                                                                            ^
+      48 |     await expect(contactVerification.getEmailAddressLocator(testData.emailAddress)).toBeVisible();
+      49 |     await contactVerification.contactDetailsForm();
+      50 |     console.log(' Contact Verification form filled successfully.');
+        at C:\Users\MindRuby\Downloads\lendingLogik\tests\TC_PersonalDetails.spec.js:47:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\error-context.md]]
+
+[[ATTACHMENT|test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Personal Details Page Tests › Step 3 - Fill all Bank Details" classname="TC_PersonalDetails.spec.js" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Personal Details Page Tests › Step 4 - Fill all Identification Details" classname="TC_PersonalDetails.spec.js" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Personal Details Page Tests › Step 5 - Fill all Income and Expense Details" classname="TC_PersonalDetails.spec.js" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Personal Details Page Tests › Step 6 - Fill all Bank Statement Upload Details" classname="TC_PersonalDetails.spec.js" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>
