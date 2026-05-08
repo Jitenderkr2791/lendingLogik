@@ -1,48 +1,17 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="39.080591">
-<testsuite name="TC_Login.spec.js" timestamp="2026-05-07T07:19:41.473Z" hostname="Chrome" tests="1" failures="1" skipped="0" time="21.601" errors="0">
-<testcase name="Login to Salesforce › Step 1 - login" classname="TC_Login.spec.js" time="21.601">
-<failure message="TC_Login.spec.js:18:11 Step 1 - login" type="FAILURE">
-<![CDATA[  [Chrome] › TC_Login.spec.js:18:11 › Login to Salesforce › Step 1 - login ─────────────────────────
-
-    Error: page.waitForTimeout: Target page, context or browser has been closed
-
-       at ..\pages\LoginPage.js:55
-
-      53 |         if (re.test(val))
-      54 |         { return val; }
-    > 55 |         await this.page.waitForTimeout(1000);
-         |                         ^
-      56 |       }
-      57 |       throw new Error('Timeout waiting for 6-digit OTP.');
-      58 |    }
-        at LoginPageMethods.waitForSixDigitOtpFromInput (C:\Users\MindRuby\Downloads\lendingLogik\pages\LoginPage.js:55:25)
-        at LoginPageMethods.performOtpFlow (C:\Users\MindRuby\Downloads\lendingLogik\pages\LoginPage.js:73:19)
-        at LoginPageMethods.loginSmartHybrid (C:\Users\MindRuby\Downloads\lendingLogik\pages\LoginPage.js:159:7)
-        at C:\Users\MindRuby\Downloads\lendingLogik\tests\TC_Login.spec.js:19:9
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\TC_Login-Login-to-Salesforce-Step-1---login-Chrome\test-finished-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\TC_Login-Login-to-Salesforce-Step-1---login-Chrome\trace.zip
-    Usage:
-
-        npx playwright show-trace ..\test-results\TC_Login-Login-to-Salesforce-Step-1---login-Chrome\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="42.513809">
+<testsuite name="TC_Login.spec.js" timestamp="2026-05-08T05:33:02.612Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="31.544" errors="0">
+<testcase name="Login to Salesforce › Step 1 - login" classname="TC_Login.spec.js" time="31.544">
 <system-out>
 <![CDATA[ Starting Salesforce Login (Hybrid Mode)...
  Waiting for Authenticator approval OR OTP screen...
  OTP screen detected directly
  Starting OTP Flow...
  OTP Attempt #1
+ OTP Entered: 471707
+ Login successful: https://resourceful-impala-ehughf-dev-ed.trailblaze.my.salesforce-setup.com/lightning/setup/SetupOneHome/home?SetupDomainReload=1&SetupDomainProbePassed=true
+ Login successfully.
 
 [[ATTACHMENT|test-results\TC_Login-Login-to-Salesforce-Step-1---login-Chrome\test-finished-1.png]]
-
-[[ATTACHMENT|test-results\TC_Login-Login-to-Salesforce-Step-1---login-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>
