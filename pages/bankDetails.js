@@ -10,46 +10,32 @@ export default class BankDetails extends BasePage {
     this.page = page;
   }
 
-  async VerifyBSBNumberLable() {
-    return await this.isElementVisible(
-      BankDetailsLocators.BSBNumberLable,
-      testData.notVisibleText
-    );
+  async VerifyBSBNumberLable() 
+  {
+    return await this.isElementVisible(BankDetailsLocators.BSBNumberLable,testData.notVisibleText);
   }
 
-  async VerifyAccountNumberLable() {
-    return await this.isElementVisible(
-      BankDetailsLocators.BankAccountNumberLable,
-      testData.notVisibleText
-    );
+  async VerifyAccountNumberLable() 
+  {
+    return await this.isElementVisible(BankDetailsLocators.BankAccountNumberLable,testData.notVisibleText);
   }
 
-  async enterBSBNumber() {
-    await this.waitAndType(
-      BankDetailsLocators.BSBNumber,
-      testData.BSBNumberInputData
-    );
+  async enterBSBNumber() 
+  {
+    await this.waitAndType(BankDetailsLocators.BSBNumber,testData.BSBNumberInputData);
   }
 
-  async enterBankAccountNumber() {
-    await this.waitAndFill(
-      BankDetailsLocators.BankAccountNumber,
-      testData.bankAccountNumber
-    );
+  async enterBankAccountNumber() 
+  {
+    await this.waitAndFill(BankDetailsLocators.BankAccountNumber,testData.bankAccountNumber);
   }
 
   async VerifyBackbutton() {
-    return await this.isElementVisible(
-      BankDetailsLocators.Backbutton,
-      testData.notVisibleText
-    );
+    return await this.isElementVisible(BankDetailsLocators.Backbutton,testData.notVisibleText);
   }
 
   async clickcontinueButton() {
-    return await this.waitAndClick(
-      BankDetailsLocators.Verifyandcontinuebuttonbankdetails,
-      testData.notEnabledText
-    );
+    return await this.waitAndClick(BankDetailsLocators.Verifyandcontinuebuttonbankdetails,testData.notEnabledText);
   }
 
   async fillBankDetailsForm() {

@@ -1,89 +1,93 @@
 import BasePage from './basePage.js';
 import fs from 'fs';
-import PersonalDetailsLocators from '../pageobjects/Pageobjectpersonaldetails.js';  // ✅ Single import
+import PersonalDetailsLocators from '../pageobjects/personalDetails.js';  // ✅ Single import
 
 const testData = JSON.parse(fs.readFileSync('./data/users.json', 'utf-8'));
 
 export default class PersonalDetails extends BasePage {
-  constructor(page) {
+  constructor(page) 
+  {
     super(page);
     this.page = page;
   }
 
-  async verifyLogoVisible() {
-    return await this.isElementVisible(
-      PersonalDetailsLocators.Logo,
-      testData.notVisibleText
-    );
+  async verifyLogoVisible()
+   {
+    return await this.isElementVisible(PersonalDetailsLocators.Logo,testData.notVisibleText);
   }
 
-  async selectLoanAmount() {
-    await this.selectValueFromDropdown(
-      PersonalDetailsLocators.Selectloanamount,
-      testData.loanAmount
-    );
+  async selectLoanAmount() 
+  {
+    await this.selectValueFromDropdown(PersonalDetailsLocators.Selectloanamount,testData.loanAmount);
   }
 
-  async selectLoanPurpose() {
-    await this.selectValueFromDropdown(
-      PersonalDetailsLocators.Selectloanpurpose,
-      testData.loanPurpose
-    );
+  async selectLoanPurpose() 
+  {
+    await this.selectValueFromDropdown(PersonalDetailsLocators.Selectloanpurpose,testData.loanPurpose);
   }
 
-  async enterFirstname() {
+  async enterFirstname() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Firstname, testData.firstName);
   }
 
-  async enterLastname() {
+  async enterLastname() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Lastname, testData.lastName);
   }
 
-  async enterBirthdate() {
+  async enterBirthdate() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Birthdate, testData.dateOfBirth);
   }
 
-  async enterMobileNumber() {
+  async enterMobileNumber() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Mobilenumber, testData.mobileNumber);
   }
 
-  async enterEmailAddress() {
+  async enterEmailAddress() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Emailaddress, testData.emailAddress);
   }
 
-  async enterStreetAddress() {
+  async enterStreetAddress() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Streetaddress, testData.streetAddress);
     await this.page.locator(PersonalDetailsLocators.Streetaddress).scrollIntoViewIfNeeded();
   }
 
-  async enterCity() {
+  async enterCity()
+   {
     await this.waitAndType(PersonalDetailsLocators.City, testData.city);
     await this.page.locator(PersonalDetailsLocators.City).scrollIntoViewIfNeeded();
   }
 
-  async enterPostalCode() {
+  async enterPostalCode() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Postalcode, testData.postalCode);
     await this.page.locator(PersonalDetailsLocators.Postalcode).scrollIntoViewIfNeeded();
   }
 
-  async enterState() {
+  async enterState()
+   {
     await this.waitAndType(PersonalDetailsLocators.State, testData.state);
     await this.page.locator(PersonalDetailsLocators.State).scrollIntoViewIfNeeded();
   }
 
-  async enterCountry() {
+  async enterCountry() 
+  {
     await this.waitAndType(PersonalDetailsLocators.Country, testData.country);
     await this.page.locator(PersonalDetailsLocators.Country).scrollIntoViewIfNeeded();
   }
 
-  async clickContinueButton() {
-    return await this.waitAndClick(
-      PersonalDetailsLocators.Continuebutton,
-      testData.notEnabledText
-    );
+  async clickContinueButton() 
+  {
+    return await this.waitAndClick(PersonalDetailsLocators.Continuebutton,testData.notEnabledText);
   }
 
-  async fillPersonalDetailsForm() {
+  async fillPersonalDetailsForm() 
+  {
     await this.verifyLogoVisible();
 
     const steps = [
@@ -102,11 +106,11 @@ export default class PersonalDetails extends BasePage {
       () => this.clickContinueButton(),
     ];
 
-    for (const step of steps) {
+    for (const step of steps) 
+      {
       await step();
       await this.wait(200);
      // await this.page.waitForLoadState('networkidle');
-
     }
   }
 }
