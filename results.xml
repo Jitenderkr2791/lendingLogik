@@ -1,16 +1,31 @@
-<testsuites id="" name="" tests="6" failures="1" skipped="4" errors="0" time="24.456455000000002">
-<testsuite name="TC_PersonalDetails.spec.js" timestamp="2026-05-08T06:16:44.165Z" hostname="Chrome" tests="6" failures="1" skipped="4" time="10.631" errors="0">
-<testcase name="Personal Details Page Tests › Step 1 - Fill all Personal Details" classname="TC_PersonalDetails.spec.js" time="5.286">
+<testsuites id="" name="" tests="7" failures="1" skipped="4" errors="0" time="69.49399300000002">
+<testsuite name="TC_Login.spec.js" timestamp="2026-05-08T09:04:22.346Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="29.543" errors="0">
+<testcase name="Login to Salesforce › Step 1 - login" classname="TC_Login.spec.js" time="29.543">
+<system-out>
+<![CDATA[ Starting Salesforce Login (Hybrid Mode)...
+ Waiting for Authenticator approval OR OTP screen...
+ Login successful via Authenticator: https://resourceful-impala-ehughf-dev-ed.trailblaze.my.salesforce-setup.com/lightning/setup/SetupOneHome/home?SetupDomainReload=1&SetupDomainProbePassed=true
+ Login successfully.
+
+[[ATTACHMENT|test-results\TC_Login-Login-to-Salesforce-Step-1---login-Chrome\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="TC_PersonalDetails.spec.js" timestamp="2026-05-08T09:04:22.346Z" hostname="Chrome" tests="6" failures="1" skipped="4" time="9.544" errors="0">
+<testcase name="Personal Details Page Tests › Step 1 - Fill all Personal Details" classname="TC_PersonalDetails.spec.js" time="3.991">
 <system-out>
 <![CDATA[✅ Selected "$500" by value
 ✅ Selected "Living Expenses" by value
  Personal Details form filled successfully.
 
+[[ATTACHMENT|test-results\TC_PersonalDetails-Persona-eb414---Fill-all-Personal-Details-Chrome\test-finished-2.png]]
+
 [[ATTACHMENT|test-results\TC_PersonalDetails-Persona-eb414---Fill-all-Personal-Details-Chrome\test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Personal Details Page Tests › Step 2 - Verify Email and Fill Contact Details" classname="TC_PersonalDetails.spec.js" time="5.345">
+<testcase name="Personal Details Page Tests › Step 2 - Verify Email and Fill Contact Details" classname="TC_PersonalDetails.spec.js" time="5.553">
 <failure message="TC_PersonalDetails.spec.js:46:7 Step 2 - Verify Email and Fill Contact Details" type="FAILURE">
 <![CDATA[  [Chrome] › TC_PersonalDetails.spec.js:46:7 › Personal Details Page Tests › Step 2 - Verify Email and Fill Contact Details 
 
@@ -40,14 +55,6 @@
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     Error Context: ..\test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\error-context.md
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\trace.zip
-    Usage:
-
-        npx playwright show-trace ..\test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
@@ -55,8 +62,6 @@
 [[ATTACHMENT|test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\test-failed-1.png]]
 
 [[ATTACHMENT|test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\error-context.md]]
-
-[[ATTACHMENT|test-results\TC_PersonalDetails-Persona-90994-il-and-Fill-Contact-Details-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>
