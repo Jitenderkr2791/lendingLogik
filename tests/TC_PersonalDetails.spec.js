@@ -73,7 +73,8 @@ test('Step 3 - Fill all Bank Details', async () => {
     console.log('Bank Statement Upload Details form filled successfully.');
   });
 
-
+  
+  
   //  Close context after all tests
   test.afterAll(async () => {
     await context.close();
